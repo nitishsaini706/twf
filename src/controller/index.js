@@ -1,6 +1,6 @@
 const translate = require('@vitalets/google-translate-api');
 
-const translate = async (req, res) => {
+const translateController = async (req, res) => {
     const { text } = req.body;
 
     if (!text) {
@@ -18,4 +18,4 @@ const translate = async (req, res) => {
 };
 
 
-module.exports = {translate};
+module.exports = { translateController };

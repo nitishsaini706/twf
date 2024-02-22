@@ -1,13 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const routes = require("./routes/index");
+const {router} = require("./routes/index");
 const app = express();
 const PORT = 3000;
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
-app.use(routes);
+app.use(router);
 
 app.get("/",async(req,res)=>{
     res.json("server running fine");
